@@ -1,0 +1,28 @@
+.controlls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  z-index: 999999;
+}
+
+.btn {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  &-disabled {
+    opacity: 0.4 !important;
+    cursor: inherit;
+    &:hover {
+      background-color: #f4f4f4 !important;
+    }
+  }
+}
