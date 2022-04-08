@@ -30,7 +30,7 @@
               <div class="slider-left">
                 <div class="slider-left__top">
                   <p class="name">TESTIMONIALS</p>
-                  <h1 class="title">
+                  <h1 class="title title-anm">
                     “This course helped me get off the ground. My mentor was
                     also amazing.”
                   </h1>
@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-right">
+              <div class="slider-right slider-right--anm">
                 <img src="./img/img-1.jpg" alt="Jane Doe" />
               </div>
             </div>
@@ -51,7 +51,7 @@
               <div class="slider-left">
                 <div class="slider-left__top">
                   <p class="name">TESTIMONIALS</p>
-                  <h1 class="title">
+                  <h1 class="title title-anm">
                     “This course helped me get off the ground. My mentor was
                     also amazing.”
                   </h1>
@@ -63,7 +63,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-right">
+              <div class="slider-right slider-right--anm">
                 <img src="./img/img-2.jpg" alt="Jane Doe" />
               </div>
             </div>
@@ -72,7 +72,7 @@
               <div class="slider-left">
                 <div class="slider-left__top">
                   <p class="name">TESTIMONIALS</p>
-                  <h1 class="title">
+                  <h1 class="title title-anm">
                     “This course helped me get off the ground. My mentor was
                     also amazing.”
                   </h1>
@@ -84,7 +84,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-right">
+              <div class="slider-right slider-right--anm">
                 <img src="./img/img-3.jpg" alt="Jane Doe" />
               </div>
             </div>
@@ -93,7 +93,7 @@
               <div class="slider-left">
                 <div class="slider-left__top">
                   <p class="name">TESTIMONIALS</p>
-                  <h1 class="title">
+                  <h1 class="title title-anm">
                     “This course helped me get off the ground. My mentor was
                     also amazing.”
                   </h1>
@@ -105,7 +105,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-right">
+              <div class="slider-right slider-right--anm">
                 <img src="./img/img-4.jpg" alt="Jane Doe" />
               </div>
             </div>
@@ -114,7 +114,7 @@
               <div class="slider-left">
                 <div class="slider-left__top">
                   <p class="name">TESTIMONIALS</p>
-                  <h1 class="title">
+                  <h1 class="title title-anm">
                     “This course helped me get off the ground. My mentor was
                     also amazing.”
                   </h1>
@@ -126,7 +126,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-right">
+              <div class="slider-right slider-right--anm">
                 <img src="./img/img-5.jpg" alt="Jane Doe" />
               </div>
             </div>
@@ -199,17 +199,34 @@
             }
           },
           slideChangeTransitionStart: function () {
-            // $(".anmt-h").hide(0);
+            // $(".person").fadeOut();
+            $(".person").hide();
+            $(".name").hide();
+            $(".slider-right").hide();
+
+            $(".name").removeClass("name-anm");
+            $("h1").removeClass("title-anm");
+            // $(".person").css({
+            //   transform: "translateY(50px)",
+            //   opacity: 0,
+            // });
           },
-          slideChangeTransitionEnd: function () {
-            // $(".anmt-h").show(0);
+          transitionEnd: function () {
+            setTimeout(function () {
+              $(".person").show();
+              $(".name").show();
+
+              $(".slider-right").show();
+              $(".slider-right").addClass("slider-right--anm");
+
+              $(".name").addClass("name-anm");
+              $("h1").addClass("title-anm");
+            }, 100);
           },
         },
       });
-      $("#btn-left").css({ opacity: 0.4, cursor: "inherit" });
 
-      const btnLeft = document.getElementById("btn-left");
-      const btnRight = document.getElementById("btn-right");
+      $("#btn-left").css({ opacity: 0.4, cursor: "inherit" });
     </script>
 
     <script src="./index.js" type="module"></script>

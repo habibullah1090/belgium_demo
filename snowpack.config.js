@@ -11,7 +11,7 @@ module.exports = {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    port: 1234,
   },
   buildOptions: {
     /* ... */
