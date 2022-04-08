@@ -1,1 +1,3 @@
-# belgium_demo
+# Advanced slider
+
+(https://swiperjs.com/)[Help]
