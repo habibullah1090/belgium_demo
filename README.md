@@ -1,3 +1,3 @@
 # Advanced slider
 
-(https://swiperjs.com/)[Help]
+[Help](https://swiperjs.com/)
